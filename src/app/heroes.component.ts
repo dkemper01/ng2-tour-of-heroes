@@ -90,10 +90,9 @@ public onDeleteInitial(event: SelectEvent, hero: Hero) {
 		var deleteTimeline = new TimelineLite();
 		var parentElement = event.target.parentElement;
 		
-		deleteTimeline.to(event.target, 0.25, {alpha: 0});
-		deleteTimeline.to(parentElement, 0.5, { right: "0em", top: "0px", ease: Cubic.easeIn });
-		deleteTimeline.to(parentElement, 0.5, { backgroundColor: "#d25c5c", ease: Cubic.easeIn }, 0.5);
-		deleteTimeline.to(event.target, 0.5, { alpha: 1, fontSize: "0.875em", textContent: "Delete" });
+		deleteTimeline.to(event.target, 0, {alpha: 0, fontSize: "0.875em" });
+		deleteTimeline.to(parentElement, 0.5, { right: "0em", backgroundColor: "#d25c5c", ease: Cubic.easeIn });
+		deleteTimeline.to(event.target, 0.5, { alpha: 1, textContent: "Delete" });
 		deleteTimeline.play();
 		
 		timelineKeyValuePair.hero = hero;
