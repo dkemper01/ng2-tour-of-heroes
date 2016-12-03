@@ -79,6 +79,7 @@ export class HeroesComponent implements OnInit{
 			this.timelineCollection.forEach(function(n) {				
 				if (n.hero === hero) {
 					n.timeline.reverse(0);
+					delete event.target.dataset.isDeleting;
 				}
 			});
 		}
