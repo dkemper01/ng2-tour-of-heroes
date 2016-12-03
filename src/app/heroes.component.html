@@ -1,0 +1,32 @@
+<div class="row content-main-push-down">
+	<div class="col-lg-12">
+		<div class="form-inline">
+			<div class="form-group">
+			<label for="heroName">Hero name: </label>
+			<input id="heroName" name="heroName" class="form-control" #heroName />
+			<button class="btn btn-default" (click)="add(heroName.value); heroName.value='';">
+				Add
+			</button>
+		</div>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-lg-12">
+		<ul class="heroes">
+			<li *ngFor="let hero of heroes" (click)="onSelect($event, hero)">
+				<div class="chip" [class.selected]="hero===selectedHero">
+					<span class="order-visual">{{hero.id}}</span>
+					{{hero.name}}
+					<div class="delete-hero"><span (click)="onDeleteInitial($event, hero)">x</span></div>
+				</div>
+			</li>
+		</ul>	
+		<div *ngIf="selectedHero">
+			<h2>
+				{{selectedHero.name | uppercase }} is my hero.
+			</h2>
+			<button class="btn btn-default nudge-right" (click)="goToDetail()">View Details</button>
+		</div>
+	</div>
+</div>

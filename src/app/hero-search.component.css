@@ -1,0 +1,22 @@
+.dashboard-heading {
+	font-size: 1.25rem;
+}
+
+.search-result{
+  border-bottom: 1px solid gray;
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
+  padding: 5px;
+  background-color: white;
+  cursor: pointer;
+	width: 96.5%;
+}
+
+#search-box {
+	margin: 1em 0 0 0;
+	width: 96.5%;
+}
+
+#search-component {
+	margin-top: 7em;
+}

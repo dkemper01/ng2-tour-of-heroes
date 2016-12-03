@@ -1,0 +1,9 @@
+.frame {
+	margin: 2em 0 1em 0;
+}
+
+@media (min-width: 544px) {
+	.form-inline .form-group-buttons {
+		padding: 12px 22px 12px 22px;
+	}
+}
