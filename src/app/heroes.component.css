@@ -25,29 +25,24 @@
 	height: 48px;
 	width: 48px;
 	border-radius: 50%;
-	background-color: #ffc107;
+	background-color: #4caf50;
 	text-align: center;
 }
 
 .chip:hover {
-	color: #607D8B;
-	background-color: #DDD;
+	color: #c8e6c9;
+	background-color: rgba(117, 117, 117, 0.62);
 	margin-left: .1em;
 }
 
 .chip.selected {
-	background-color: #CFD8DC;
+	background-color: rgba(117, 117, 117, 0.62);
 	color: white;
 }
 
 .chip.selected:hover {
-	background-color: #BBD8DC;
-	color: white;
-}
-
-.selected {
-	background-color: #CFD8DC !important;
-	color: white;
+	background-color: rgba(117, 117, 117, 0.62);
+	color: #c8e6c9;
 }
 
 .heroes {
@@ -81,15 +76,19 @@
 	right: -1.5em; 
 	top: 0em;
 	font-size: 1.5em; 
-	width: 70px; 
+	height: 100%;
+	width: 60px; 
 	border-top-right-radius: 24px; 
 	border-bottom-right-radius: 24px;
 }
 
-.delete-hero span {
-	padding: 0.50em;
+.delete-hero div {
+	position: relative;
+	padding-top: 0;
+	padding-bottom: 0;
+	top: 1px;
 }
 
 .delete-hero:hover {
-	color: ghostwhite;
+	color: #c8e6c9;
 }

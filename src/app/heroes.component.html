@@ -18,7 +18,7 @@
 				<div class="chip" [class.selected]="hero===selectedHero">
 					<span class="order-visual">{{hero.id}}</span>
 					{{hero.name}}
-					<div class="delete-hero"><span (click)="onDeleteInitial($event, hero)">x</span></div>
+					<div class="delete-hero"><div (click)="onDeleteInitial($event, hero)">x</div></div>
 				</div>
 			</li>
 		</ul>	

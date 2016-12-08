@@ -66,7 +66,7 @@ export class HeroesComponent implements OnInit{
 
 		this.selectedHero = hero;
 		
-		if ((event.target.localName === "span") && (event.target.textContent === "Delete")) {	
+		if ((event.target.localName === "div") && (event.target.textContent === "Delete")) {	
 			this.heroService.delete(hero.id).then(() => {				
 				this.heroes = this.heroes.filter(h => h !== hero);
 				
@@ -91,9 +91,9 @@ public onDeleteInitial(event: SelectEvent, hero: Hero) {
 		var deleteTimeline = new TimelineLite();
 		var parentElement = event.target.parentElement;
 		
-		deleteTimeline.to(event.target, 0, {alpha: 0, fontSize: "0.875em" });
-		deleteTimeline.to(parentElement, 0.5, { right: "0em", backgroundColor: "#d25c5c", ease: Cubic.easeIn });
-		deleteTimeline.to(event.target, 0.5, { alpha: 1, textContent: "Delete" });
+		deleteTimeline.to(event.target, 0, {autoAlpha: 0, fontSize: "0.80em" });
+		deleteTimeline.to(parentElement, 0.5, { right: "0em", backgroundColor: "#ff4081", ease: Cubic.easeIn });
+		deleteTimeline.to(event.target, 0.5, { autoAlpha: 1, textContent: "Delete", x: 7 });
 		deleteTimeline.play();
 		
 		timelineKeyValuePair.hero = hero;
